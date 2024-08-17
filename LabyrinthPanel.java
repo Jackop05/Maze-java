@@ -2,6 +2,8 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
+
+
 public class LabyrinthPanel extends JPanel implements MouseListener {
     private char[][] labyrinth;
     private int tileSize = 20;
@@ -24,9 +26,6 @@ public class LabyrinthPanel extends JPanel implements MouseListener {
         return labyrinth;
     }
 
-    public int getTileSize() {
-        return tileSize;
-    }
 
     @Override
     protected void paintComponent(Graphics g) {
@@ -34,6 +33,7 @@ public class LabyrinthPanel extends JPanel implements MouseListener {
         if (labyrinth != null) {
             int numRows = labyrinth.length;
             int numCols = labyrinth[0].length;
+
 
             for (int i = 0; i < numRows; i++) {
                 for (int j = 0; j < numCols; j++) {
@@ -87,6 +87,10 @@ public class LabyrinthPanel extends JPanel implements MouseListener {
         }
     }
 
+    private boolean isValid(int x, int y, int numRows, int numCols) {
+        return x >= 0 && x < numRows && y >= 0 && y < numCols;
+    }
+
     @Override
     public void mousePressed(MouseEvent e) {}
     @Override
@@ -95,9 +99,4 @@ public class LabyrinthPanel extends JPanel implements MouseListener {
     public void mouseEntered(MouseEvent e) {}
     @Override
     public void mouseExited(MouseEvent e) {}
-
-    private boolean isValid(int x, int y, int numRows, int numCols) {
-        return x >= 0 && x < numRows && y >= 0 && y < numCols;
-    }
 }
-

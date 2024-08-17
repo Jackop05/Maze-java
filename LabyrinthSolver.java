@@ -2,6 +2,8 @@ import java.awt.*;
 import java.util.*;
 import javax.swing.*;
 
+
+
 public class LabyrinthSolver {
 
     public static void findShortestPath(Main mainFrame) {
@@ -16,6 +18,7 @@ public class LabyrinthSolver {
 
             queue.offer(mainFrame.startPoint);
             visited[mainFrame.startPoint.x][mainFrame.startPoint.y] = true;
+
 
             while (!queue.isEmpty()) {
                 Point current = queue.poll();

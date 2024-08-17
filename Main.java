@@ -2,7 +2,10 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
+
+
 public class Main extends JFrame implements ActionListener {
+
     JFileChooser fileChooser;
     LabyrinthPanel labyrinthPanel;
     JScrollPane scrollPane;
@@ -33,21 +36,12 @@ public class Main extends JFrame implements ActionListener {
 
     private void createMenu() {
         JMenuBar menuBar = new JMenuBar();
-
-        // Create the "Menu" item with bold font, icon, border, and cursor change
         JMenu fileMenu = new JMenu("Menu");
         fileMenu.setFont(new Font("Arial", Font.BOLD, 16));
-        fileMenu.setIcon(new ImageIcon("menu-icon.png")); // Ensure you have an icon file
-
-        // Add a tooltip to the "Menu"
+        fileMenu.setIcon(new ImageIcon("menu-icon.png"));
         fileMenu.setToolTipText("Click to see options");
-
-        // Add a border around the menu item
         fileMenu.setBorder(BorderFactory.createLineBorder(Color.BLACK, 1));
-
-        // Set the cursor to a pointer when hovering over the menu
         fileMenu.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
-
         JMenuItem openTextMenuItem = new JMenuItem("Wczytaj z pliku tekstowego");
         openTextMenuItem.addActionListener(this);
         fileMenu.add(openTextMenuItem);
