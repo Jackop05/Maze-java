@@ -5,6 +5,9 @@
 
 A Java implementation of maze generation and solving algorithms with visualization capabilities.
 
+<img width="1076" alt="image" src="https://github.com/user-attachments/assets/b9d32ab3-be38-4880-b2e7-b5140b76c11b" />
+
+
 ## Features
 
 - **Maze Generation**:
