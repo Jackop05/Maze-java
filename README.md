@@ -1,7 +1,6 @@
 # Maze Generator and Solver in Java
 
 [![Java](https://img.shields.io/badge/Java-17%2B-blue)](https://java.com)
-[![License](https://img.shields.io/badge/License-MIT-green)](https://opensource.org/licenses/MIT)
 
 A Java implementation of maze generation and solving algorithms with visualization capabilities.
 
